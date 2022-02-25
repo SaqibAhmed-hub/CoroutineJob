@@ -17,7 +17,7 @@ interface ApiService {
     suspend fun getData1(): Response<employee>
 
     companion object {
-        suspend fun getService(): ApiService {
+        fun getService(): ApiService {
 
             val loggingInterceptor = HttpLoggingInterceptor()
             loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
